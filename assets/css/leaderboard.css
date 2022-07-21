@@ -1,7 +1,47 @@
 :root {
-    --PrimaryColor: #001D3D;
-    --SeconderyColor: #003566;
-    --AccentColor: #FFC300;
-    --Black: #000;
-    --white: #FFF;
-  }
+  --PrimaryColor: #001D3D;
+  --SeconderyColor: #467199;
+  --AccentColor: #FFC300;
+  --Black: #000;
+  --white: #FFF;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--PrimaryColor);
+}
+
+main {
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+  box-shadow: 7px 5px 8px 3px #02130700;
+
+}
+
+table {
+  background-color: var(--SeconderyColor);
+  /* border:none; */
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+table th,
+table td {
+  border: 1px solid white;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
