@@ -1,8 +1,8 @@
 let input = document.querySelector(".userInput");
 let button = document.querySelector('.button');
-button.addEventListener('click', SaveUser, false);
+button.addEventListener('click', SavePlayer, false);
 
-function SaveUser() {
+function SavePlayer() {
     if (!(input.value)) {
         alert("Please , Enter name!")
         return;
