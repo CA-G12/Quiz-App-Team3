@@ -1,21 +1,12 @@
 :root {
   --PrimaryColor: #001d3d;
-  --SeconderyColor: #d9e2ebc9;
+  --SeconderyColor: #003566;
   --AccentColor: #ffc300;
   --Black: #000;
   --white: #fff;
 }
-/*
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
- 
-}
-*/
 
-body{
+body {
   height: 100vh;
   background-color: var(--PrimaryColor);
   display: flex;
@@ -24,92 +15,95 @@ body{
   align-items: center;
 }
 
-
-
-
-section{
+section {
   border-radius: 10px;
   width: 50%;
   background-color: var(--SeconderyColor);
 }
 
+h4 {
+  font-weight: bolder;
+}
 
-
-.quiz-header{
-  background-color: #386ca3;
+.quiz-header {
+  color: var(--SeconderyColor);
+  background-color: var(--AccentColor);
   border-radius: 10px 10px 0 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
- /* border-bottom: 1px solid var(--AccentColor);*/
+  /* border-bottom: 1px solid var(--AccentColor);*/
   padding: 0px 40px;
 }
 
-
-
-.question-text{
-  display: flex;
-  justify-content: center;
+.question-text {
+  color: var(--white);
+  text-align: center;
   font-size: 1.2em;
 }
 
-
-
-.question-options{
+.question-options {
+  color: var(--SeconderyColor);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
-  margin: 0px;
-  padding: 0px;
 }
 
-
-
-
-.answer{
+.answer {
   display: none;
 }
 
-
-
-section ul li{
+section ul {
   width: 60%;
-  margin: 10px;
-  padding: 10px;
-  background-color: #ffc300;
   list-style: none;
   display: flex;
+  padding: 10px 0px 10px 0px;
   justify-content: center;
-  border-radius: 10px;
-
 }
 
+li {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--AccentColor);
+  background-color: var(--AccentColor);
+  border-radius: 10px;
+  margin: 10px 0px 10px 0px;
+}
 
+label {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
 
-
-
-
-button{
+button {
   background-color: var(--AccentColor);
   border: none;
   display: block;
   width: 100%;
   cursor: pointer;
+  border: 1px solid var(--AccentColor);
   border-radius: 0px 0px 10px 10px;
   margin-top: 10px;
-  padding: 10px; 
-
+  padding: 10px;
 }
 
-button:hover{
-  background-color:#b49326;
+.answer:hover {
+  background-color: var(--PrimaryColor);
+  color: var(--white);
+}
+li:hover {
+  background-color: var(--PrimaryColor);
+  color: var(--white);
+  border: 1px solid var(--AccentColor);
 }
 
-
-.score{
+.score {
   padding: 40px;
   display: flex;
   flex-direction: column;

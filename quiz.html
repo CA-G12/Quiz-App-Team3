@@ -11,8 +11,8 @@
     <section>
       <div class="quiz-container">
         <div class="quiz-header">
-          <h4>user name</h4>
-          <h4>2/10</h4>
+          <h3 id="user-name">user name</h3>
+          <h3 id="question-indicator">2/10</h3>
         </div>
 
         <div class="question-text">
@@ -21,18 +21,12 @@
 
         <ul class="question-options">
           <li>
-            <input
-              id="a"
-              type="radio"
-              name="answer"
-              class="answer"
-              value="None"
-            />
+            <input id="a" type="radio" name="answer" class="answer" />
             <label for="a" id="a_text">Mohammed</label>
           </li>
 
           <li>
-            <input id="b" type="radio" name="answer" class="answer" checked />
+            <input id="b" type="radio" name="answer" class="answer" />
             <label for="b" id="b_text">Aya</label>
           </li>
 
@@ -58,6 +52,6 @@
       </div>
     </section>
   </body>
-  <script src="./script/data.js"></script>
+  <script type="module" src="./script/data.js"></script>
   <script src="./script/quiz.js"></script>
 </html>
