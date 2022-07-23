@@ -86,6 +86,12 @@ const questionIndicator = document.getElementById("question-indicator");
 const nextBtn = document.getElementById("nextQuestion");
 const options = document.getElementsByTagName("input");
 const optionsLabel = document.getElementsByTagName("label");
+const questionContainer = document.getElementById("quiz-container");
+const scoreContainer = document.getElementById("score-container");
+const scoreText = document.getElementById("score");
+const doneBtn = document.getElementById("done-button");
+
+const userName = document.getElementById("user-name");
 
 const option1 = document.getElementById("a");
 const option2 = document.getElementById("b");
@@ -94,12 +100,14 @@ const option4 = document.getElementById("d");
 
 const dataLength = data.length;
 
+var players = JSON.parse(localStorage.getItem("players"));
 var score = 0;
 var arr = [];
 var qIndex = 0;
 var rIndex = randomUnique(dataLength);
 
 nextBtn.addEventListener("click", CheckAnswer);
+doneBtn.addEventListener("click", finishQuiz);
 
 option1.addEventListener("click", isChecked);
 option2.addEventListener("click", isChecked);
@@ -109,7 +117,6 @@ option4.addEventListener("click", isChecked);
 showQuestion();
 
 function isChecked() {
-  
   if (option1.checked) {
     option1.parentElement.style.background = getComputedStyle(
       document.documentElement
@@ -167,19 +174,25 @@ function CheckAnswer() {
 }
 
 function showQuestion() {
-  qIndex++;
-  questionIndicator.textContent = `${qIndex}/10`;
-  let questionObj = data[arr[qIndex]];
-  let answers = questionObj.answers;
-  questionElement.innerHTML = questionObj.question;
-  let labels = Array.from(optionsLabel);
-  labels.map((x, c) => {
-    x.innerText = answers[c];
-  });
-  option1.parentElement.removeAttribute("style");
-  option2.parentElement.removeAttribute("style");
-  option3.parentElement.removeAttribute("style");
-  option4.parentElement.removeAttribute("style");
+  userName.textContent = players[players.length - 1].name;
+
+  if (qIndex < 10) {
+    qIndex++;
+    questionIndicator.textContent = `${qIndex}/10`;
+    let questionObj = data[arr[qIndex]];
+    let answers = questionObj.answers;
+    questionElement.innerHTML = questionObj.question;
+    let labels = Array.from(optionsLabel);
+    labels.map((x, c) => {
+      x.innerText = answers[c];
+    });
+    option1.parentElement.removeAttribute("style");
+    option2.parentElement.removeAttribute("style");
+    option3.parentElement.removeAttribute("style");
+    option4.parentElement.removeAttribute("style");
+  } else {
+    showScore();
+  }
 }
 
 function randomUnique(max) {
@@ -188,4 +201,18 @@ function randomUnique(max) {
     if (arr.indexOf(r) === -1) arr.push(r);
   }
   return arr;
+}
+
+function showScore() {
+  questionContainer.style.display = "none";
+  scoreContainer.style.display = "flex";
+  scoreText.textContent = `${score}/10`;
+}
+
+function finishQuiz() {
+  players[players.length - 1] = {
+    name: userName.textContent,
+    score: score,
+  };
+  localStorage.setItem("players", JSON.stringify(players));
 }

@@ -9,7 +9,7 @@
   </head>
   <body>
     <section>
-      <div class="quiz-container">
+      <div id="quiz-container">
         <div class="quiz-header">
           <h3 id="user-name">user name</h3>
           <h3 id="question-indicator">2/10</h3>
@@ -45,11 +45,17 @@
       </div>
     </section>
 
-    <section>
-      <div class="score">
+    <section id="score-container">
         <h2>Your Score:</h2>
-        <h2>8</h2>
-      </div>
+        <h2 id="score">8/10</h2>
+        <button
+          id="done-button"
+          type="submit"
+          onclick="location.href = './leaderboard.html';"
+          class="button"
+        >
+          DONE
+        </button>
     </section>
   </body>
   <script type="module" src="./script/data.js"></script>

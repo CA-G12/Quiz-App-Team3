@@ -1,9 +1,9 @@
 :root {
-  --PrimaryColor: #001D3D;
+  --PrimaryColor: #001d3d;
   --SeconderyColor: #467199;
-  --AccentColor: #FFC300;
+  --AccentColor: #ffc300;
   --Black: #000;
-  --white: #FFF;
+  --white: #fff;
 }
 
 body {
@@ -22,12 +22,27 @@ h1 {
   color: white;
   text-align: center;
 }
+button {
+  font-weight: bolder;
+  height: 50px;
+  width: 100%;
+  color: var(--white);
+  background-color: var(--AccentColor);
+  padding: 8px;
+  text-align: center;
+  margin: 5% 0% 0px 0%;
+  border: 1px solid var(--AccentColor);
+  border-radius: 0px 0px 16px 16px;
+}
 
+button:hover {
+  color: var(--AccentColor);
+  background-color: var(--PrimaryColor);
+}
 .container {
   width: 50%;
   margin: auto;
   box-shadow: 7px 5px 8px 3px #02130700;
-
 }
 
 table {
@@ -35,7 +50,6 @@ table {
   /* border:none; */
   border-collapse: collapse;
   width: 100%;
-
 }
 
 table th,
