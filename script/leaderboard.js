@@ -10,7 +10,7 @@ function displayHighestScore() {
 
 }
 function createViews(players) {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i <players.length; i++) {
         let row = document.createElement('tr');
         let tdName = document.createElement('td');
         let tdScore = document.createElement('td');
@@ -19,5 +19,8 @@ function createViews(players) {
         row.append(tdName);
         row.append(tdScore);
         tbody.append(row);
+        if(i==5){
+            break;
+        }
     }
 }
