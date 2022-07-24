@@ -17,7 +17,7 @@ function createViews(players) {
     row.append(tdName);
     row.append(tdScore);
     tbody.append(row);
-    if (i == 5) {
+    if (i == 4) {
       break;
     }
   }
