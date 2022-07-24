@@ -1,82 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/quiz.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/quiz.css" />
     <title>Document</title>
-</head>
-<body>
-    
-    <section >
-
-        <div class="quiz-container">
-
-            <div class="quiz-header">
-                <h4>user name</h4>
-                <h4>2/10</h4>
-            </div>
-    
-            
-            <div class="question-text" >
-                <p>JavaScript is a ___ -side programming language.</p>
-            </div>
-         
-            
-                <ul class="question-options">
-                    <li>
-                            <input type="radio" name="answer" id="a" class="answer">
-                        <label for="a" id="a_text">None</label>    
-                    </li>
-    
-    
-                    <li>
-                        <input type="radio" name="answer" id="a" class="answer">
-                        <label for="a" id="a_text">None</label>    
-                    </li>
-    
-    
-                    <li>
-                        <input type="radio" name="answer" id="a" class="answer">
-                        <label for="a" id="a_text">None</label>    
-                    </li>
-    
-    
-                    <li> 
-                        <input type="radio" name="answer" id="a" class="answer">
-                        <label for="a" id="a_text">None</label>          
-                    </li>
-    
-                </ul>
-
-           
-          
-        
-
-            <button id="submit">Next</button>
-
-        </div>
-        
-
-    
-        
-
-    </section>
-
-
+  </head>
+  <body>
     <section>
-        <div class="score">
-            <h2>Your Score:</h2>
-            <h2>8</h2>
-
+      <div id="quiz-container">
+        <div class="quiz-header">
+          <h3 id="user-name">user name</h3>
+          <h3 id="question-indicator">2/10</h3>
         </div>
 
+        <div class="question-text">
+          <p id="question">JavaScript is a ___ -side programming language.</p>
+        </div>
+
+        <ul class="question-options">
+          <li>
+            <input id="a" type="radio" name="answer" class="answer" />
+            <label for="a" id="a_text">Mohammed</label>
+          </li>
+
+          <li>
+            <input id="b" type="radio" name="answer" class="answer" />
+            <label for="b" id="b_text">Aya</label>
+          </li>
+
+          <li>
+            <input id="c" type="radio" name="answer" class="answer" />
+            <label for="c" id="c_text">Rabee</label>
+          </li>
+
+          <li>
+            <input id="d" type="radio" name="answer" class="answer" />
+            <label for="d" id="d_text">None</label>
+          </li>
+        </ul>
+
+        <button id="nextQuestion" type="submit">Next</button>
+      </div>
     </section>
 
-
-
-
-
-</body>
+    <section id="score-container">
+        <h2>Your Score:</h2>
+        <h2 id="score">8/10</h2>
+        <button
+          id="done-button"
+          type="submit"
+          onclick="location.href = './leaderboard.html';"
+          class="button"
+        >
+          DONE
+        </button>
+    </section>
+  </body>
+  <script type="module" src="./script/data.js"></script>
+  <script src="./script/quiz.js"></script>
 </html>

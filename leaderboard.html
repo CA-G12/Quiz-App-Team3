@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/leaderboard.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/leaderboard.css" />
     <title>Leaderboard</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <h1>LeaderBoard</h1>
-        <section class="container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Player Name</th>
-                        <th>Player Score</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-
-                </tbody>
-            </table>
-        </section>
-        <script src="./script/leaderboard.js"></script>
+      <h1>LeaderBoard</h1>
+      <section class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Player Name</th>
+              <th>Player Score</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        <button
+          type="submit"
+          on
+          onclick="location.href = './index.html';"
+          class="button"
+        >
+          GIVE IT ANOTHER SHOT
+        </button>
+      </section>
+      <script src="./script/leaderboard.js"></script>
     </main>
-</body>
-
+  </body>
 </html>

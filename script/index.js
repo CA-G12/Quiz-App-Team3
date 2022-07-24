@@ -21,7 +21,6 @@ function SavePlayer() {
         });
         localStorage.setItem('players', JSON.stringify(players));
         window.location.href = '../quiz.html';
-
     }
 
 }
